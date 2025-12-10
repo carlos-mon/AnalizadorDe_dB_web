@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de dB - Proyecto Final</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #E3F2FD; /* El mismo azul de tu App */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #37474F;
+        }
+        header {
+            background-color: #4FC3F7;
+            color: white;
+            padding: 2rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0; }
+        .container {
+            max-width: 900px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .emulator-container {
+            margin-top: 2rem;
+            position: relative;
+            /* Simulamos un marco de celular simple */
+            border: 10px solid #333;
+            border-radius: 30px;
+            overflow: hidden;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            background: black;
+        }
+        iframe {
+            border: none;
+            width: 360px; /* Ancho típico de celular */
+            height: 740px; /* Alto típico */
+            display: block;
+        }
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        footer {
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+            padding-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Analizador de dB</h1>
+        <p>Proyecto para Funciones y Matrices - INACAP</p>
+    </header>
+
+    <div class="container">
+        <h2>Prueba la App en Vivo</h2>
+        <p>Esta aplicación mide decibeles en tiempo real, guarda historiales y alerta sobre niveles peligrosos para personas con TEA.</p>
+
+        <div class="emulator-container">
+            <iframe 
+                src="https://appetize.io/embed/b_j26clmjxdjenamxzlfmektx7zi" 
+                width="370" 
+                height="800" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
+        </div>
+
+        <div class="info-card">
+            <h3>Características Técnicas:</h3>
+            <ul>
+                <li><strong>Lenguaje:</strong> Kotlin (Nativo)</li>
+                <li><strong>Matemáticas:</strong> Escala Logarítmica (dB) y cálculo RMS.</li>
+                <li><strong>Base de Datos:</strong> Room (SQLite) para persistencia histórica.</li>
+                <li><strong>Interfaz:</strong> Jetpack Compose con gráficos en tiempo real.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desarrollado por Carlos Barrientos - Profesor Lorenzo Albanés</p>
+    </footer>
+
+</body>
+</html>
